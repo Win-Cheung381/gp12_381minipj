@@ -705,11 +705,6 @@ const deleteRestaurant = (db, criteria, callback) => {
         });
 }
 
- // Initialize the app.
-  var server = app.listen(process.env.PORT || 8099, function () {
-    var port = server.address().port;
-    console.log("App now running on port", port);
-  });
-});
+ 
 
-//app.listen(process.env.PORT || 8099);
+app.listen(process.env.PORT || 8099);

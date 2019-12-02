@@ -1,6 +1,7 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
 const mongourl = "mongodb+srv://t:t@cluster0-za5zz.mongodb.net/test?retryWrites=true&w=majority";
+var mongodb = require("mongodb");
 const dbName = "test";
 const app = express();
 const assert = require('assert');
@@ -704,5 +705,11 @@ const deleteRestaurant = (db, criteria, callback) => {
         });
 }
 
+ // Initialize the app.
+  var server = app.listen(process.env.PORT || 8099, function () {
+    var port = server.address().port;
+    console.log("App now running on port", port);
+  });
+});
 
-app.listen(process.env.PORT || 8099);
+//app.listen(process.env.PORT || 8099);

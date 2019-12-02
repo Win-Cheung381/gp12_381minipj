@@ -2,42 +2,47 @@
 <head>
     <title>Filtering</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
 </head>
 
    <body>
-	<header class="w3-container w3-teal">
+	<header>
 	    <h1>Searching Restaurants</h1>
 	</header>
 
-        <form action='/search' method="get" encType="multipart/form-data" class="w3-container"
+        <form action='/search' method="get" encType="multipart/form-data" 
         style="width:100%">
 	   <p>
-                <input name="name" class="w3-input" type="text">
-                <label class="w3-label w3-validate">Name</label></p>
+	   	<label>Name:</label>
+                <input name="name" type="text">
+                </p>
             <p>
-                <input name="borough" class="w3-input" type="text">
-                <label class="w3-label w3-validate">Borough</label></p>
+	     	<label>Borough:</label>
+                <input name="borough" type="text">
+                </p>
             <p>
-                <input name="cuisine" class="w3-input" type="text">
-                <label class="w3-label w3-validate">Cuisine</label></p>
+	        <label>Cuisine:</label>
+                <input name="cuisine" "type="text">
+                </p>
             <p>
-                <input name="street" class="w3-input" type="text">
-                <label class="w3-label w3-validate">Street</label></p>
+	    	<label>Street:</label>
+                <input name="street" type="text">
+                </p>
             <p>
-                <input name="building" class="w3-input" type="text">
-                <label class="w3-label w3-validate">Building</label></p>
+	    	<label>Building:</label>
+                <input name="building" type="text">
+                </p>
             <p>
             <p>
-                <input name="zipcode" class="w3-input" type="text">
-                <label class="w3-label w3-validate">Zipcode</label></p>
+	   	 <label>Zipcode:</label>
+                <input name="zipcode" type="text">
+                </p>
            <br>
-            <button class="w3-btn w3-section w3-teal w3-ripple">Search</button> 
+            <button>Search</button> 
         </form>
-        <div class="w3-container">
+        <div>
         <a href="/index">
-                <button class="w3-btn w3-section w3-teal w3-ripple">Home</button>
+                <button>Home</button>
                 </a>
         </div>
     </body> 

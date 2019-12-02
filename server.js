@@ -13,7 +13,6 @@ const formidable = require('formidable');
 
 
 
-
 app.set('view engine', 'ejs');
 app.use('/api/*', bodyParser.json());
 app.use('/api/*', bodyParser.urlencoded({ extended: true }));
@@ -175,14 +174,12 @@ app.post('/api/restaurant', function (req, res) {
 
 
 //app.us
-
-var SECRETKEY1 = '1';
-var SECRETKEY2 = '2';
 app.use(session({
-	name: 'session',
-	keys: [SECRETKEY1,SECRETKEY2]
-}));
+    secret: 'admin',
+    name: 'testapp',
+    maxAge: 1000 * 60 * 60
 
+}));
 
 app.use((req, res, next) => {
     if (req.path == '/' || req.path == '/login' || req.path == '/loginSection' || req.path == '/register' || req.path == '/signUp') {

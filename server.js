@@ -1,14 +1,18 @@
 const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-const fs = require('fs');
-const session = require('cookie-session');
-const formidable = require('formidable');
 const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
-const ObjectID = require('mongodb').ObjectID;
-const mongourl = "mongodb://t:<password>@cluster0-shard-00-00-za5zz.mongodb.net:27017,cluster0-shard-00-01-za5zz.mongodb.net:27017,cluster0-shard-00-02-za5zz.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
+const mongourl = "mongodb+srv://t:t@cluster0-za5zz.mongodb.net/test?retryWrites=true&w=majority";
 const dbName = "test";
+const app = express();
+const assert = require('assert');
+const session = require('cookie-session');
+const ObjectID = require('mongodb').ObjectID;
+const fs = require('fs');
+const bodyParser = require('body-parser');
+const formidable = require('formidable');
+
+
+
+
 
 app.set('view engine', 'ejs');
 app.use('/api/*', bodyParser.json());
@@ -170,13 +174,15 @@ app.post('/api/restaurant', function (req, res) {
 });
 
 
-//app.use
-app.use(session({
-    secret: 'admin',
-    name: 'testapp',
-    maxAge: 1000 * 60 * 60
+//app.us
 
+var SECRETKEY1 = '1';
+var SECRETKEY2 = '2';
+app.use(session({
+	name: 'session',
+	keys: [SECRETKEY1,SECRETKEY2]
 }));
+
 
 app.use((req, res, next) => {
     if (req.path == '/' || req.path == '/login' || req.path == '/loginSection' || req.path == '/register' || req.path == '/signUp') {

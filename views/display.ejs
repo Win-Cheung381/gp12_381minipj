@@ -53,18 +53,18 @@
     <%}%>
 
 
-    <div class="w3-container">
+    <div>
         
-    <p><label class="w3-label w3-validate">Restauramt ID: </label><%= restaurant[0].restaurant_id%></p>
-    <p><label class="w3-label w3-validate">Name: </label><%= restaurant[0].name%></p>
-    <p><label class="w3-label w3-validate">Borough: </label><%= restaurant[0].borough%></p>
-    <p><label class="w3-label w3-validate">Cuisine: </label><%= restaurant[0].cuisine%></p>
-    <p><label class="w3-label w3-validate">Street: </label><%= restaurant[0].address.street%></p>
-    <p><label class="w3-label w3-validate">Building: </label><%= restaurant[0].address.building%></p>
-    <p><label class="w3-label w3-validate">Zipcode: </label><%= restaurant[0].address.zipcode%></p>
-    <p><label class="w3-label w3-validate">GPS:
+    <p><label>Restauramt ID: </label><%= restaurant[0].restaurant_id%></p>
+    <p><label>Name: </label><%= restaurant[0].name%></p>
+    <p><label>Borough: </label><%= restaurant[0].borough%></p>
+    <p><label>Cuisine: </label><%= restaurant[0].cuisine%></p>
+    <p><label>Street: </label><%= restaurant[0].address.street%></p>
+    <p><label>Building: </label><%= restaurant[0].address.building%></p>
+    <p><label>Zipcode: </label><%= restaurant[0].address.zipcode%></p>
+    <p><label>GPS:
         </label>[<%= restaurant[0].address.coord[0]%>,<%= restaurant[0].address.coord[1]%>]</p>
-    <p><label class="w3-label w3-validate">Rating: </label>
+    <p><label>Rating: </label>
     </p>
 
     <% if((restaurant[0].grades).length){%>
@@ -76,7 +76,7 @@
     </ol>
     <%}%>
         <p>
-            <label class="w3-label w3-validate">Owner: </label> <%= restaurant[0].owner%> </p>
+            <label>Owner: </label> <%= restaurant[0].owner%> </p>
         <p>
             </div>
 
@@ -87,7 +87,7 @@
                 href="/gmap?lat=<%= restaurant[0].address.coord[0]%>&lon=<%= restaurant[0].address.coord[1]%>&title=<%= restaurant[0].name%>">  ->View Map</a>
             <%}%>
 
-    <div class="w3-container">
+    <div>
         <%if(!rate ){%>
             <a href="/rate?_id=<%= restaurant[0]._id%>" style="text-decoration: none">
                 <button>Rate</button>
@@ -95,14 +95,14 @@
             <%}%>
             <%if(user){%>
             <a href="/modify?_id=<%= restaurant[0]._id%>" style="text-decoration: none">
-                <button class="w3-btn w3-section w3-teal w3-ripple">Edit</button>
+                <button>Edit</button>
             </a>
             <a href="/remove?_id=<%= restaurant[0]._id%>" style="text-decoration: none">
-                <button class="w3-btn w3-section w3-teal w3-ripple">Delete</button>
+                <button>Delete</button>
             </a>
             <%}%>
 	    <a href="/index">
-                <button class="w3-btn w3-section w3-teal w3-ripple">Home</button>
+                <button>Home</button>
             </a>
             </div>
 </body>

@@ -18,7 +18,6 @@
             padding: 0;
         }
     </style>
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 </head>
 
 <body>
@@ -91,7 +90,7 @@
     <div class="w3-container">
         <%if(!rate ){%>
             <a href="/rate?_id=<%= restaurant[0]._id%>" style="text-decoration: none">
-                <button class="w3-btn w3-section w3-teal w3-ripple">Rate</button>
+                <button>Rate</button>
             </a>
             <%}%>
             <%if(user){%>

@@ -5,16 +5,16 @@
 
 <body>
 
-    <div class="w3-container w3-teal">
+    <div>
         <h2>Rate </h2>
     </div>
     <p>
-        <form action="/raterestaurant?_id=<%=_id%>" method="post" class="w3-container">
+        <form action="/raterestaurant?_id=<%=_id%>" method="post">
             <input type="hidden" name="_id" value=<%=_id%>>
             <label>Score (1-10):</label>
             <input class="w3-input" type="number" name="score" min=1 max=10>
 	    <br>
-            <button class="w3-btn w3-section w3-teal w3-ripple">Rate</button>
+            <button>Rate</button>
         </form>
 </body>
 
